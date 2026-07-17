@@ -1,0 +1,5 @@
+print(1,end="\t")
+print(2, 3,sep="\t")
+print(4, 5, 6,sep="\t")
+print(7,8,sep= "\t",end= "\t")
+print(9)
