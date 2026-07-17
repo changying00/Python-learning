@@ -80,7 +80,7 @@ ls = [
 ]
 
 # 要求 对列表 进行排序 、按照 年龄升序排列 、如果 年龄相同、 则 按照 成绩降序排列
-ls.sort(key=lambda d: (d.get("age"),  -d.get("score")))
+ls.sort(key=lambda x: (x.get("age"),  -x.get("score")))
 
 print(ls)
 
