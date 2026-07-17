@@ -10,7 +10,7 @@ n = int(input("请输入一个正整数\n"))
 
 # 构建一个代表 n 行的二维列表、 且每行的 列数等于行数
 data  = [[1 for _ in range(x + 1)] for x in range(n)]
-
+print(data)
 #从 第三行 开始遍历 data 准备填充数据
 for y in range(2,len(data)):
     #获取当前 y行 对应的列表
