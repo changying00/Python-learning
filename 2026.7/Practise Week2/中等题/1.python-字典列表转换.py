@@ -9,14 +9,15 @@ ls1 = ["黑龙江省","浙江省","江西省","广东省","福建省"]
 #定义一个变量ls2，存储列表值
 
 ls2 = ["哈尔滨","杭州","南昌","广州","福州"]
-
-# dic1 =dict(zip(ls1,ls2))
-# print(dic1)
-#
-
-dic1 = {
-    province:city
-    for province,city in zip(ls1,ls2)
-}
-
+#把俩个列表通过zip打包，在dict()解包成字典
+dic1 =dict(zip(ls1,ls2))
 print(dic1)
+
+
+#列表推导式
+# dic1 = {
+#     province:city
+#     for province,city in zip(ls1,ls2)
+# }
+#
+# print(dic1)
