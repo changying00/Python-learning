@@ -31,3 +31,9 @@ print("\n玩家3:")
 print(player3)
 print("\n底牌:")
 print(bottom_cards)
+
+
+list()
+dict()
+set()
+tuple()
