@@ -81,58 +81,58 @@ city_tem = [
 # print(city_sort)
 
 #第一种解法
-henan_time = []
-henan_temp = []
-
-guangdong_time = []
-guangdong_temp = []
-
-sichuan_time = []
-sichuan_temp = []
-city_sort = []
-for item in city_tem:
-        if item["city"] == "河南省":
-            henan_time.append(item["time"])
-            henan_temp.append(item["temperature"])
-        elif item["city"] == "广东省":
-            guangdong_time.append(item["time"])
-            guangdong_temp.append(item["temperature"])
-        else:
-            sichuan_time.append(item["time"])
-            sichuan_temp.append(item["temperature"])
-city_sort.append({
-    "city":"河南省",
-    "time":henan_time,
-    "temperature":henan_temp
-})
-
-
-city_sort.append({
-    "city":"广东省",
-    "time":guangdong_time,
-    "temperature":guangdong_temp
-})
-
-
-city_sort.append({
-    "city":"四川省",
-    "time":sichuan_time,
-    "temperature":sichuan_temp
-})
-print(city_sort)
-#第二种解法
-# city_sort = []
-# result= {}
-# for item in city_tem:
-#     city = item["city"]
-#     if city not in result:
-#         result[city] = {
-#             "city": city,
-#             "time": [],
-#             "temperature": []
-#         }
-#     result[city]["time"].append(item["time"])
-#     result[city]["temperature"].append(item["temperature"])
-# city_sort=list(result.values())
+# henan_time = []
+# henan_temp = []
 #
+# guangdong_time = []
+# guangdong_temp = []
+#
+# sichuan_time = []
+# sichuan_temp = []
+# city_sort = []
+# for item in city_tem:
+#         if item["city"] == "河南省":
+#             henan_time.append(item["time"])
+#             henan_temp.append(item["temperature"])
+#         elif item["city"] == "广东省":
+#             guangdong_time.append(item["time"])
+#             guangdong_temp.append(item["temperature"])
+#         else:
+#             sichuan_time.append(item["time"])
+#             sichuan_temp.append(item["temperature"])
+# city_sort.append({
+#     "city":"河南省",
+#     "time":henan_time,
+#     "temperature":henan_temp
+# })
+#
+#
+# city_sort.append({
+#     "city":"广东省",
+#     "time":guangdong_time,
+#     "temperature":guangdong_temp
+# })
+#
+#
+# city_sort.append({
+#     "city":"四川省",
+#     "time":sichuan_time,
+#     "temperature":sichuan_temp
+# })
 # print(city_sort)
+#第二种解法
+city_sort = []
+result= {}
+for item in city_tem:
+    city = item["city"]
+    if city not in result:
+        result[city] = {
+            "city": city,
+            "time": [],
+            "temperature": []
+        }
+    result[city]["time"].append(item["time"])
+    result[city]["temperature"].append(item["temperature"])
+city_sort=list(result.values())
+
+print(city_sort)
