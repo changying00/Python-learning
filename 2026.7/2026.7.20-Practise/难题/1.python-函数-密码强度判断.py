@@ -44,64 +44,80 @@ def  password_strong(password):
         score += 10
     else:
         score += 25
+
         # 统计
-    lower = 0
-    upper = 0
-    digit = 0
-    symbol = 0
-    # 遍历密码
-    for i in password:
-        # 判断字母
-        if i.islower():
-            lower += 1
-        elif i.isupper():
-            upper += 1
-        # 判断数字
-        elif i.isdigit():
-            digit += 1
-        # 判断符号
+        lower = 0
+        upper = 0
+        digit = 0
+        symbol = 0
+
+        for i in password:
+
+            if i.islower():
+                lower += 1
+
+            elif i.isupper():
+                upper += 1
+
+            elif i.isdigit():
+                digit += 1
+
+            else:
+                symbol += 1
+
+        # 2.字母评分
+        if lower == 0 and upper == 0:
+            score += 0
+
+        elif lower > 0 and upper > 0:
+            score += 20
+
         else:
-            symbol += 1
-    # ----------------
-    # 字母评分
-    # ----------------
-    if lower == 0 and upper == 0:
-        score += 0
-    elif lower == len(password) or upper == len(password):
-        score += 10
-    else:
-        score += 20
-    # ----------------
-    # 数字评分
-    # ----------------
-    if digit == 0:
-        score += 0
-    elif digit < 3:
-        score += 10
-    else:
-        score += 20
-    # ----------------
-    # 符号评分
-    # ----------------
-    if symbol == 0:
-        score += 0
-    elif symbol == 1:
-        score += 10
-    else:
-        score += 25
-    # ----------------
-    # 奖励
-    # ----------------
-    # 大小写字母 + 数字 + 符号
-    if lower > 0 and upper > 0 and digit > 0 and symbol > 0:
-        score += 10
-    # 数字 + 字母 + 符号
-    elif (lower > 0 or upper > 0) and digit > 0 and symbol > 0:
-        score += 5
-    # 字母 + 数字
-    elif (lower > 0 or upper > 0) and digit > 0:
-        score += 2
+            score += 10
+
+        # 3.数字评分
+        if digit == 0:
+            score += 0
+
+        elif digit < 3:
+            score += 10
+
+        else:
+            score += 20
+
+        # 4.符号评分
+        if symbol == 0:
+            score += 0
+
+        elif symbol == 1:
+            score += 10
+
+        else:
+            score += 25
+
+        # 5.奖励
+        if lower > 0 and upper > 0 and digit > 0 and symbol > 0:
+            score += 10
+
+        elif (lower > 0 or upper > 0) and digit > 0 and symbol > 0:
+            score += 5
+
+        elif (lower > 0 or upper > 0) and digit > 0:
+            score += 2
 
     if score >= 90:
-        return A
-    elif
+        return "非常安全, A"
+    elif score >=80:
+        return "安全（Secure）B"
+    elif score >= 70:
+        return "非常强  C"
+    elif score >= 60:
+        return  "强（Strong）D"
+    elif score >= 50:
+        return  " 一般（Average）E"
+    elif score >= 25:
+        return  "弱（Weak）F"
+    else :
+        return "非常弱  G"
+
+print(password_strong("88888"))
