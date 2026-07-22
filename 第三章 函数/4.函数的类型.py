@@ -33,7 +33,39 @@
     高阶函数：函数里面使用另一个函数。
 """
 
+"""
+老师总结
 
+函数 可以 按照 参数 和 返回值 的 不同 分为 5 大类 
+
+    -  任务型函数 :   既没有参数 、也没有返回值 。
+
+        function test():
+            print("hello")
+
+
+    -  消费型函数 :   只有参数 、但没有 返回值 。
+
+        function test(string):
+            print(string)
+
+    -  生产型函数 :  没有参数、但有返回值 
+
+        function test():
+            return random.random()
+
+    -  功能型函数 :  既有参数 、又有返回值 
+
+        function test(a):
+            return a ** 2
+
+
+    -  断言型函数 :  是 一种 特殊的 功能型函数 、返回 bool 类型
+
+        function test(a):
+            return a >= 10
+
+"""
 # 1. 任务型函数：无参数，无返回值
 def show_menu():
     print("1. 添加")

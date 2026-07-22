@@ -20,3 +20,17 @@
             key 是一个函数
 
 """
+
+# def sum(a, b):
+#     return a + b
+
+# 匿名函数
+sum = lambda a, b: a + b
+
+# 获取 函数的名字
+print(sum.__name__)
+# 调用 匿名函数
+print(sum(1, 2))
+
+# 获取 函数的类型
+print(type(sum))

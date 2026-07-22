@@ -5,7 +5,12 @@
 闭包的作用:
     1，闭包 可以 延长 非局部变量的 作用的范围
 
+闭包的缺点:
 
+    滥用闭包 可能会导致 内存泄漏
+
+
+编写一个 函数 、该函数 可以实现 生成 连续且不重复的数字
 """
 #定义一个变量、用来存储唯一的标识
 def generator_key():
@@ -19,7 +24,6 @@ def generator_key():
     return generator_unique_number
 gen = generator_key()
 print(gen())
-
 print(gen())
 
 #只要 gen 这个闭包对象还存在，identify 就会在上一次的基础上继续累加。
