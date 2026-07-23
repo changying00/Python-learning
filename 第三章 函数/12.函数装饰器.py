@@ -15,11 +15,8 @@
 
 """
 import time
-
-
 def timer(target):
     """记录目标函数执行时长"""
-
     def wrapper(*args, **kwargs):
         # 获取 目标函数执行前的 时间戳
         start = time.time()
@@ -32,18 +29,14 @@ def timer(target):
         return ret
 
     return wrapper
-
-
-def sum(a, b):
-    # 获取 函数 任务 执行前 的 开始时间
-    start = time.time()
-    c = a + b
-    # 获取 函数任务 执行后的 结束时间
-    end = time.time()
-    print(f"函数 sum 执行时长 {end - start} 秒")
-    return c
-
-
+# def sum(a, b):
+#     # 获取 函数 任务 执行前 的 开始时间
+#     start = time.time()
+#     c = a + b
+#     # 获取 函数任务 执行后的 结束时间
+#     end = time.time()
+#     print(f"函数 sum 执行时长 {end - start} 秒")
+#     return c
 @timer
 def sub(a, b):
     return a - b
@@ -59,16 +52,8 @@ def div(a, b):
 @timer
 def pow(a, b):
     return a ** b
-
-
 # print(sum(1, 10))
-
-
-
-
 # 统计 sub 函数执行的时长
 # print(timer(sub)(3, 5))
-
 print(sub(3, 5))
-
 print(mul(3, 6))

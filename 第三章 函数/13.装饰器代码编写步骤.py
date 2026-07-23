@@ -18,10 +18,7 @@
 如果 在装饰器 希望 装饰的目标函数 函数名仍旧是 原来的名字、则需要在装饰器 内部函数上面 添加一个 @functools.wrap(func)
 """
 import functools
-
-
 def double(func):
-
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
         # 调用 目标函数 获取结果
@@ -29,21 +26,14 @@ def double(func):
         # 判断 ret 结果是否是 整数
         if type(ret) == int:
             return ret * 2
-
         # 如果 不满足条件 、返回目标函数执行的结果
         return ret
-
     return wrapper
-
-
 @double
 def sum(a, b):
     """求和"""
     return a + b
-
-
 # sum 等价于  double(sum)、 sum(3, 5) 等价于 double(sum)(3, 5)
 # 如果 一个函数 被装饰器 修饰了 ，那么 这么函数 会发生变化哪
 print(sum,  sum.__name__)
-
 print(sum(3, 5))

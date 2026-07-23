@@ -1,0 +1,18 @@
+#1.函数的装饰器-应用1
+@power(4) 先执行，得到一个装饰器函数 decorator。
+
+decorator 接收被装饰的函数 get_number。
+
+调用 get_number() 时，实际上执行的是 wrapper()。
+
+wrapper() 内部先调用原函数，得到 2。
+
+再执行 2 ** 4，结果为 16。
+
+带参数装饰器的固定模板是：
+def 外层(参数):
+    def 中层(func):
+        def 内层(*args, **kwargs):
+            return func(*args, **kwargs)
+        return 内层
+    return 中层
