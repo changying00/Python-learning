@@ -21,14 +21,10 @@ regex = r"\d+"
 # m = re.search(regex, string)
 # m = re.match(regex, string)
 m = re.fullmatch(regex, string)
-
 if m is not None:
     # 获取匹配的内容
     print(m.group())
-
 print(m)
-
-
 strings = """
 https://www.baidu.com/images/xx.jpg
 https://www.baidu.com/images/xx.jpg2
@@ -38,8 +34,6 @@ https://www.baidu.com/images/xx.doc
 https://www.baidu.com/images/xx.pdg
 https://www.baidu.com/images/xx.txt
 """
-
 # 编写一个正则表达式、提取 字符串中 每一行 表示 图片路径的 数据
 regex = r"^.+\.(?:jpe?g|png|gif|bmp)$"
-
 print(re.findall(regex, strings, re.M))
