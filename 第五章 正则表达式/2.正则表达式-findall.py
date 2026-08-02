@@ -1,10 +1,15 @@
 """
 
-    re.findall(pattern,string,flags):
+    re.findall(pattern, string, flags):
 
-        pattern: 传入 正则表达式 或者 pattern 对象
+        pattern :  传入 正则表达式 或者 pattern 对象
 
-        string :
+        string :  要处理的 字符串
+
+        flags :  正则 需要使用的 模式 、常见 模式 re.I,  re.S,  re.M
+
+    返回一个列表、 列表中 存储 正则匹配的 内容
+
 """
 import re as  re
 #实例一
@@ -27,3 +32,12 @@ regex = r"<dd><a\s+href='(.*?)'>(.*?)</a></dd>"
 result = re.findall(regex,string)
 print(result)
 
+
+# 示例三
+string = "1353653365354212611156145112521151151565616212771"
+
+# 尝试 从字符串中 提取 满足 手机号 格式的数据
+regex = r"(1[3-9]\d{5})\d{4}"
+
+result = re.findall(regex, string)
+print(result)

@@ -15,3 +15,7 @@
 import re
 #正则表达式 如果 包含\，通常需要在 字符串 前添加 前缀r
 pattern = re.compile(r'(\w+)')
+# 正则表达式 如果 包含 \,  通常需要 在 字符串 前 添加 前缀 r
+pattern = re.compile(r"\d+", re.I | re.M | re.S)
+
+print(pattern, type(pattern))
