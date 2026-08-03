@@ -5,11 +5,11 @@ client = anthropic.Anthropic()
 message = client.messages.create(
     model="deepseek-v4-pro",
     max_tokens=1000,
-    system="你是一个python专家，帮我我学习python",
+    system="你是百科全书",
     messages=[
         {
             "role": "user",
-            "content": "给我说说你的用法",
+            "content": "给我介绍一下北京大学",
         }
     ],
 )
