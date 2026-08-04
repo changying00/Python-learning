@@ -9,7 +9,7 @@ message = client.messages.create(
     messages=[
         {
             "role": "user",
-            "content": "给我介绍一下北京大学",
+            "content": "今天郑州天气如何？",
         }
     ],
 )
