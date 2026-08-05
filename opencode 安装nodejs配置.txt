@@ -1,0 +1,9 @@
+npm config set prefix "D:\Program Files\nodejs"
+npm config set cache "D:\Program Files\nodejs" 
+npm config set registry https://registry.npmmirror.com
+
+
+
+
+
+
