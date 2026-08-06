@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"^## \\\\|^# \\\\|^---$\" \"C:/Users/QK/Desktop/open code/chapters/ch41.md\")",
+      "Bash(python *)"
+    ]
+  }
+}

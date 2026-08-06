@@ -1,0 +1,49 @@
+About the Author
+Mark Lutz
+ is the author of Python’s classic and foundational texts, a former
+trainer with two decades of experience teaching Python to newcomers, and one
+of the people responsible for the prominence that Python enjoys today.
+Mark wrote the three O’Reilly books 
+Learning Python
+, 
+Programming Python
+,
+and 
+Python Pocket 
+Reference
+, all currently in fourth, fifth, or sixth editions. He
+has been using and promoting Python since 1992, started writing Python books
+in 1995, and began teaching Python classes in 1997.
+All told, Mark has taught thousands of learners live and in person, and his
+published works span 12k pages among 15 books that cover Pythons 1.X
+through 3.X. He also has BS and MS degrees in computer science, work
+experience in compilers and other domains, and a current interest in Python-
+coded apps that run on both PCs and phones.
+For more author background, see Mark’s books-and-software website, 
+learning-
+python.com
+.
+
+Colophon
+The animal on the cover of 
+Learning Python
+, sixth edition, is a wood rat
+(
+Neotoma muridae
+). The wood rat lives in a wide range of conditions (mostly
+rocky, scrub, and desert areas) over much of North and Central America,
+generally at some distance from humans. Wood rats are good climbers, nesting
+in trees or bushes up to six meters off the ground; some species burrow
+underground or in rock crevices or inhabit other species’ abandoned holes.
+These grayish-beige, medium-size rodents are the original pack rats: they carry
+anything and everything into their homes, whether or not it’s needed, and are
+especially attracted to shiny objects such as tin cans, glass, and silverware.
+Many of the animals on O’Reilly covers are endangered; all of them are
+important to the world.
+The cover illustration is by Karen Montgomery, based on a 19th-century
+engraving from 
+Cuvier’s Animals
+. The series design is by Edie Freedman, Ellie
+Volckhausen, and Karen Montgomery. The cover fonts are Gilroy Semibold and
+Guardian Sans. The text font is Adobe Minion Pro; the heading font is Adobe
+Myriad Condensed; and the code font is Dalton Maag’s Ubuntu Mono.
