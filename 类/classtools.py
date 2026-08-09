@@ -8,7 +8,7 @@ class AttrDisplay:
        实例自身存储的每个属性的 name=value 对（不含从类继承
        来的属性）。可以混入（mixin）任何类，对任何实例都有效。
        """
-    def __gatherAttrs(self):
+    def gatherAttrs(self):
         attes = []
         for key in sorted(self.__dict__): # 按键名排序，逐个取属性
             attes.append(f'{key}={getattr(self, key)}')# 用 getattr 取属性值
