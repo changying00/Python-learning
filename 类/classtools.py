@@ -34,3 +34,5 @@ print(X.__dict__)
 result = [a for a in dir(X) if not a.startswith('__')]
 print(result)
 print(SubTest.__bases__)
+print(SubTest.__mro__)
+print(SubTest.__class__)
