@@ -1,7 +1,4 @@
 #"Assorted class utilities and tools"   # 杂项类工具
-from traceback import print_tb
-
-
 class AttrDisplay:
     """
        提供一个可继承的显示重载方法：显示实例的类名，以及
@@ -30,9 +27,9 @@ if __name__ == '__main__':
     print(X)# 显示全部实例属性
     print(Y) # 显示最低层的类名
     print(Z)
-print(X.__dict__)
-result = [a for a in dir(X) if not a.startswith('__')]
-print(result)
-print(SubTest.__bases__)
-print(SubTest.__mro__)
-print(SubTest.__class__)
+    print(X.__dict__)
+    result = [a for a in dir(X) if not a.startswith('__')]
+    print(result)
+    print(SubTest.__bases__)
+    print(SubTest.__mro__)
+    print(SubTest.__class__)
