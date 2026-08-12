@@ -31,3 +31,5 @@ X.delegate()
 print(Super.__dict__)
 print(Dub.__dict__)#'__abstractmethods__': frozenset() 没有了不报错
 # print(Sub.__dict__)#'__abstractmethods__': frozenset({'action'}) 抽象还含有还会报错
+# print(type(Dub))
+print(Dub.__class__)

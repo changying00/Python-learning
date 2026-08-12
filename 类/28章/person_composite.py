@@ -22,3 +22,7 @@ if __name__=="__main__":
     pat.giveRaise(.10)
     print(pat.lastName())
     print(pat)
+    a = 1
+    print(a.__class__)
+    print(Manager.__bases__)
+    print(Manager.__dict__)

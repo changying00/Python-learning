@@ -67,7 +67,6 @@ class DefaultImageReader(AbstractImageReader):
     def _read_file(self) -> None:
         print(f"DefaultImageReader 正在读取未知格式文件: {self.path}")
 
-
 class ImageReader:
     def __init__(self, path):
         default_reader = DefaultImageReader(path, None)
