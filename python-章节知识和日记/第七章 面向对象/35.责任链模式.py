@@ -12,27 +12,22 @@ class AbstractImageReader(ABC):
         # 将 传入 的 reader 作为 下一个要读取图片的类
         self.__next = reader
         self.__path = path
-
     @property
     def path(self):
         return self.__path
-
     @abstractmethod
     def is_support(self) -> bool:
         """是否支持读取图片"""
         pass
-
     @abstractmethod
     def _read(self):
         """读取图片内容"""
         pass
-
     def read(self):
         """负责读取图片"""
         if self.is_support():
             # 读取图片内容
             return self._read()
-
         # 如果 不支持读取、则委托下一个 ImageReader 读取
         if self.__next is not None:
             return self.__next.read()
