@@ -23,16 +23,16 @@ if __name__ == '__main__':
             TopTest.count += 2  # 每次创建都递增
     class SubTest(TopTest):
         pass           # 什么也不做，仅继承
-    # X,Y,Z=  TopTest(), SubTest(),SubTest()    # 创建两个实例
-    # print(X)# 显示全部实例属性
-    # print(Y) # 显示最低层的类名
-    # print(Z)
-    # print(X.__dict__)
-    # result = [a for a in dir(X) if not a.startswith('__')]
-    # print(result)
-    # print(SubTest.__bases__)
-    # print(TopTest.__name__)
-    # # print(X.__name__)
-    # print(X.__class__)
+    X,Y,Z=  TopTest(), SubTest(),SubTest()    # 创建两个实例
+    print(X)# 显示全部实例属性
+    print(Y) # 显示最低层的类名
+    print(Z)
+    print(X.__dict__)
+    result = [a for a in dir(X) if not a.startswith('__')]
+    print(result)
+    print(SubTest.__bases__)
+    print(TopTest.__name__)
+    # print(X.__name__)
+    print(X.__class__)
     print(dir(TopTest))
     print(dir(AttrDisplay))
