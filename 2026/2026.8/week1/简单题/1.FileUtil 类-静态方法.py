@@ -1,50 +1,59 @@
 """
+"""
+import os
 class FileUtils:
 
     @classmethod
     def get_files(cls, path: str,  predicate: Callable[[str], bool] = None) -> List[str]:
         """根据 predicate条件获取指定目录下所有满足条件的文件"""
-        pass 
+        
 
     @classmethod
     def remove(cls, path: str) -> None:
-        """删除文件或目录"""   
-        pass
+        """删除文件或目录"""
+        #判断path 是否为文件，如果是文件使用os.remove删除
+        if os.path.isfile(path):
+            os.remove(path)
+        else:
+            #不是文件就是，目录删除
+            os.rmdir(path)
 
     @classmethod
     def get_parent(cls, path: str) -> str:
         """获取上一级路径"""   
-        pass
+        return os.path.dirname(path)
     
     @classmethod
     def get_name(cls, path: str) -> str:
         """获取路径对应的文件名"""
-        pass 
+        return os.path.basename(path)
 
     @classmethod
     def get_size(cls, file: str) -> int:
         """ 获取文件的大小 """
-        pass
+        return os.path.getsize(file)
 
     @classmethod
     def is_dir(cls, path: str) -> bool:
         """判断路径是否是目录"""
-        pass 
+        if os.path.isdir(path):
+            return True
+        return False
 
     @classmethod
     def is_file(cls, path: str) -> bool:
         """判断磁盘路径是否是 文件"""
-        pass 
-
+        data = os.path.basename(path)
+        return os.path.isfile(data)
     @classmethod
     def exists(cls, path: str) -> bool:
         """判断路径是否存在 """
-        pass 
+        return os.path.exists(path)
 
     @classmethod
     def get_ext(cls, file: str) -> str:
         """获取 文件 后缀名"""
-        pass 
+        return os.path.basename(file).split(".")[-1]
 
     @classmethod
     def copy_file_to_dir(cls, file: str,  directory: str)-> None:
