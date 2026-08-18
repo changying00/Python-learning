@@ -5,7 +5,7 @@
 使用 json.load(fd) 读取文件的内容，并进行反序列化、且数据的格式为 Student ，
 属性值 类型和原类型保持一致。
 """
-from datetime import date
+from datetime import date,datetime
 import json
 #定义一个类
 class Student:
@@ -35,6 +35,7 @@ def convetor_student(dct):
     birth = dct.pop("birth")
     # 进行日期的反格式化
     time = date.fromisoformat(birth)
+    #也可以这样写time = datetime.strptime(birth,"%Y-%m-%d").date()
     dct["birth"] = time
     return Student(**dct)
 
