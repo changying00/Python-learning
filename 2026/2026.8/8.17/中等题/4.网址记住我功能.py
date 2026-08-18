@@ -29,7 +29,7 @@ def generator_remember_token(username, password, key, duration):
     return token
 def check_remember_token(token, username, password, key):
     try:
-        # 1. Base64 解码
+        # 1. Base64 解码  
         token_text = base64.b64decode(token).decode()
         # 2. 拆分
         token_username, timestamp, token_md5 = token_text.split(":")
