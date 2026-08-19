@@ -21,7 +21,7 @@ def get_prime(num, prime_list: list,  num_lock, list_lock):
 
 
 if __name__ == "__main__":
-    prime_list = []
+    prime_list_num = []
     # 生成器
     num = (x for x in range(2, 1000000))
     # 生成器的锁
@@ -34,7 +34,7 @@ if __name__ == "__main__":
     for i in range(100):
         thread = Thread(
             target=get_prime,
-            args=(num, prime_list, num_lock, list_lock)
+            args=(num, prime_list_num, num_lock, list_lock)
         )
 
         thread.start()
@@ -46,4 +46,5 @@ if __name__ == "__main__":
     end = time.time()
 
     print(f"共消耗时长：{end - start:.2f}秒")
-    print(f"素数数量：{len(prime_list)}")
+    print(f"素数数量：{len(prime_list_num)}")
+    #shift + f6 一键改相同的
