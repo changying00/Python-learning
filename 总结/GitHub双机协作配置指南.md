@@ -35,7 +35,7 @@
 
 ```powershell
 git config --global user.name "changying00"
-git config --global user.email "你的GitHub邮箱@example.com"
+git config --global user.email "2541104422@gamil.com"
 ```
 
 检查是否生效：
@@ -51,7 +51,7 @@ git config --global --list
 ### 4.1 生成 SSH 密钥
 
 ```powershell
-ssh-keygen -t ed25519 -C "你的GitHub邮箱@example.com"
+ssh-keygen -t ed25519 -C "2541104422@gamil.com"
 ```
 
 操作说明：
