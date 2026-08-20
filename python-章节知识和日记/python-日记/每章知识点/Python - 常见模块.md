@@ -369,7 +369,7 @@ print(dirs)
 - os.path.join(basedir, *path) :  将 basedir 和 path 进行路径拼接、 path 如果是绝对路径， 则 会忽略 basedir
 - os.path.split(path) :  将 指定的路径 进行拆分 、获取 一个 长度为 2 的元组 (父级路径、 名字)
 
-# open函数 
+# open函数 c
 
 >  `open(path, mode, encoding) `
 > 

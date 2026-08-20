@@ -1,10 +1,9 @@
 """
 使用多线程 完成笔趣阁 https://www.52xbq.com/xiaoshuo/238687/ 某小说的抓取和下载。(网站可随意)
 """
-from random import random
 import requests
-import time
 import re
+import time, random
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib import parse
 
@@ -46,7 +45,7 @@ def home_page(url):
     home_text = load_url(url)
 
     #编写一个正则表达式、匹配小说的名字
-    regex = r'<meta\s+property="og:novel:book_name"\s+content="(.*?)"/>'
+    regex = r'\s+<meta\sproperty="og:novel:book_name"\scontent="(.*?)"\s+/>'
     match = re.search(regex, home_text)
     #获取第一个分组就是 小说名字
     name = match.group(1)
@@ -59,14 +58,14 @@ def home_page(url):
     cap_text =match.group(1)
 
     #编写正则表达式、提取每个章节的 URL 和 章节标题
-    regex = r"<li>\s+<a\s+href=\"(.*?)\"\s+title=\"(.*?)\">(.*?)</a>\s+</li>"
+    regex = r"<li><a\shref=\"(.*?)\"\stitle=\"(.*?)\">\2</a></li>"
     # 提取 所有的连接地址 和 标题
     cap_list = re.findall(regex, cap_text)
     return cap_list,name
 
 def parse_caputer(url,title,index):
     """负责解析小说章节正文内容"""
-    time.sleep(random.uniform(0.01, 0.05))
+    time.sleep(random.uniform(0.1, 0.5))
     print(f"正在抓取章节 {title}、对应的 URL是 {url} ....")
     # 读取 url 对应的 源代码
     html_text = load_url(url)
@@ -79,10 +78,10 @@ def parse_caputer(url,title,index):
     text = re.sub(regex,"",text1)
     return index, title, text
 if __name__ == "__main__":
-        url = "https://www.52xbq.com/xiaoshuo/10631/"
+        url = "https://www.52xbq.com/xiaoshuo/76087/#"
         capt_list = home_page(url)
         #构建一个30个线程的线程池
-        executor = ThreadPoolExecutor(max_workers=20)
+        executor = ThreadPoolExecutor(max_workers=10)
         # 定义一个容器、存储所有的 futuer 对象
         futuers = []
         # 创建一个 index 表示 索引、 方便 数据抓取成功 排序

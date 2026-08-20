@@ -58,10 +58,10 @@ if __name__ == "__main__":
         # 调用load_url 对当前网址 获取 reponse 返回的text 内容
 
         home_text = load_url(url)
-        # print(home_text)
+        print(home_text)
 
         # 编写一个正则表达式、匹配小说的名字
-        regex = r'<meta\sproperty="og:novel:book_name"\scontent="(.*?)"/>'
+        regex = r'\s+<meta\sproperty="og:novel:book_name"\scontent="(.*?)"\s+/>'
         match = re.search(regex, home_text)
         # 获取第一个分组就是 小说名字
         name = match.group(1)
@@ -81,7 +81,7 @@ if __name__ == "__main__":
 
 
         #构建一个30个线程的线程池
-        executor = ThreadPoolExecutor(max_workers=20)
+        executor = ThreadPoolExecutor(max_workers=10)
         # 定义一个容器、存储所有的 futuer 对象
         futuers = []
         # 创建一个 index 表示 索引、 方便 数据抓取成功 排序
