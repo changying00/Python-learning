@@ -18,7 +18,7 @@ ls  = [1,2,3,4,5]
 
 it =  iter(ls)
 # print(list(it))
-print(set(it))
+print(list(it))
 # print(next(it))
 # print(next(it))
 # print(next(it))
